@@ -1,5 +1,7 @@
 ---
 name: devops-engineer
+model: inherit
+color: cyan
 description: DevOps and infrastructure specialist. Handles CI/CD pipelines, containerisation, cloud infrastructure (AWS/GCP/Azure), IaC (Terraform), monitoring, and deployment strategies. Use for pipeline setup, infrastructure work, Docker/K8s, and deployment automation.
 ---
 

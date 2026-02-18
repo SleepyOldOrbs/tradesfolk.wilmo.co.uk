@@ -1,5 +1,7 @@
 ---
 name: systems-programmer
+model: inherit
+color: green
 description: Systems programming specialist. Handles Rust, Go, C/C++, performance-critical code, concurrency, memory management, and low-level systems work. Use for systems-level features, performance-critical paths, CLI tools, and concurrent programming.
 ---
 

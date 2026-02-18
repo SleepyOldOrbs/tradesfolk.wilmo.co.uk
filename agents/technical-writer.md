@@ -1,5 +1,7 @@
 ---
 name: technical-writer
+model: inherit
+color: magenta
 description: Technical documentation specialist. Writes API docs, guides, tutorials, ADRs, and READMEs. Handles documentation architecture, content strategy, and developer experience. Use for writing docs, improving existing documentation, and creating onboarding materials.
 ---
 

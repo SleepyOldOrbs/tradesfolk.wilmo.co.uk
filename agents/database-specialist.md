@@ -1,5 +1,7 @@
 ---
 name: database-specialist
+model: inherit
+color: green
 description: Database design and optimisation specialist. Handles schema design, query optimisation, migrations, indexing, and data modelling. Covers PostgreSQL, MySQL, MongoDB, Redis, and other datastores. Use for schema design, slow query fixes, migration planning, and data architecture.
 ---
 

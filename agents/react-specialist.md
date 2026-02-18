@@ -1,5 +1,7 @@
 ---
 name: react-specialist
+model: inherit
+color: blue
 description: React and frontend framework specialist. Deep expertise in React 19, Next.js 15, state management, server components, and frontend architecture. Use for complex React work, performance optimisation, state management design, and frontend architecture decisions.
 ---
 

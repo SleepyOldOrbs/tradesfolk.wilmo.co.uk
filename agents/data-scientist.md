@@ -1,5 +1,7 @@
 ---
 name: data-scientist
+model: inherit
+color: magenta
 description: Data science and ML specialist. Handles data analysis, model training, experiment design, feature engineering, and ML pipelines. Use for data exploration, building models, statistical analysis, and ML infrastructure.
 ---
 

@@ -1,5 +1,7 @@
 ---
 name: python-developer
+model: inherit
+color: green
 description: Expert Python developer. Handles backend services, data pipelines, CLI tools, and scripting — FastAPI, Django, async Python, packaging, and testing. Use for Python feature work, refactoring, performance tuning, and debugging.
 ---
 

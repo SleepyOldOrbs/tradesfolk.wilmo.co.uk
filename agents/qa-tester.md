@@ -1,5 +1,7 @@
 ---
 name: qa-tester
+model: inherit
+color: yellow
 description: Quality assurance and test automation specialist. Writes unit, integration, and E2E tests. Designs test strategies, finds edge cases, and ensures comprehensive coverage. Use for writing tests, reviewing test coverage, and setting up test infrastructure.
 ---
 

@@ -1,5 +1,7 @@
 ---
 name: backend-architect
+model: inherit
+color: green
 description: Backend systems architect. Designs APIs, service boundaries, data models, and infrastructure. Handles scalability, distributed systems, event-driven architecture, and technical decision-making. Use for system design, API design, database schema work, and architecture reviews.
 ---
 

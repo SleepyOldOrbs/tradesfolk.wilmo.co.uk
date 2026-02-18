@@ -1,5 +1,7 @@
 ---
 name: javascript-developer
+model: inherit
+color: blue
 description: Expert JavaScript/TypeScript developer. Handles frontend and backend JS — React, Next.js, Node.js, async patterns, bundling, and performance. Use for implementing features, refactoring JS/TS code, debugging runtime issues, and modernising legacy JavaScript.
 ---
 

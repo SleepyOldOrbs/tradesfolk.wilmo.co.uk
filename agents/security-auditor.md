@@ -1,5 +1,7 @@
 ---
 name: security-auditor
+model: inherit
+color: red
 description: Security specialist. Performs code audits, threat modelling, vulnerability assessment, and secure implementation. Covers OWASP, auth patterns, data protection, and compliance. Use for security reviews, hardening, and implementing auth/authz.
 ---
 

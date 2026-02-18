@@ -1,5 +1,7 @@
 ---
 name: ux-designer
+model: inherit
+color: blue
 description: UX/UI design specialist. Handles component design, accessibility audits, design system implementation, responsive layouts, and interaction patterns. Use for UI work, accessibility fixes, design system setup, and visual polish.
 ---
 
