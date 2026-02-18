@@ -1,40 +1,128 @@
 # Agent Pool Plugin
 
-A Claude Code plugin that provides a pre-defined roster of specialist agents for Agent Teams.
+A Claude Code plugin providing a pre-defined roster of specialist agents for Agent Teams.
+
+## Concept
+
+When Claude Code's Agent Teams feature creates a team, the Team Lead spawns teammates ad-hoc. This plugin fills a gap: instead of inventing agents on the fly, the Lead pulls from a **curated pool** of domain specialists with proven system prompts, consistent structure, and clear expertise boundaries. Think of it like calling a tradesman from a directory rather than training a random person.
+
+## Project status: IN PROGRESS
+
+See `STATUS.md` for detailed current state and outstanding work.
 
 ## Structure
 
-- `agents/` — Specialist agent definitions (markdown with YAML frontmatter)
-- `skills/` — Team management skills (browse-pool, assemble-team)
-- `hooks/` — Quality gate hooks for teammate lifecycle events
-- `.claude-plugin/plugin.json` — Plugin manifest
+```
+agent-pool/
+├── .claude-plugin/
+│   └── plugin.json          # Plugin manifest
+├── agents/                   # 12 specialist agent definitions
+│   ├── javascript-developer.md
+│   ├── react-specialist.md
+│   ├── ux-designer.md
+│   ├── python-developer.md
+│   ├── backend-architect.md
+│   ├── systems-programmer.md
+│   ├── database-specialist.md
+│   ├── qa-tester.md
+│   ├── security-auditor.md
+│   ├── devops-engineer.md
+│   ├── data-scientist.md
+│   └── technical-writer.md
+├── skills/
+│   ├── browse-pool/SKILL.md  # View the agent roster
+│   └── assemble-team/SKILL.md # Get team recommendations for a task
+├── hooks/
+│   ├── hooks.json            # TeammateIdle hook config
+│   └── teammate-checklist.sh # Lightweight idle check
+├── CLAUDE.md                 # This file
+├── STATUS.md                 # Project status and TODO
+├── LICENSE                   # MIT
+└── .gitignore
+```
+
+## Agent format
+
+Each agent is a markdown file in `agents/` with YAML frontmatter:
+
+```markdown
+---
+name: kebab-case-name
+model: inherit
+color: blue
+description: One-line summary of expertise and when to use this agent.
+---
+
+System prompt body goes here...
+```
+
+### Required frontmatter fields
+
+| Field | Values | Purpose |
+|-------|--------|---------|
+| `name` | kebab-case, 3-50 chars | Agent identifier |
+| `model` | `inherit`, `sonnet`, `opus`, `haiku` | Which Claude model to use |
+| `color` | `blue`, `cyan`, `green`, `yellow`, `magenta`, `red` | Terminal display colour |
+| `description` | Free text | Used by Claude Code for agent discovery/matching |
+
+### Colour scheme by domain
+
+- **Blue** — Frontend & UI (javascript-developer, react-specialist, ux-designer)
+- **Green** — Backend & Systems (python-developer, backend-architect, systems-programmer, database-specialist)
+- **Yellow** — Quality (qa-tester)
+- **Red** — Security (security-auditor)
+- **Cyan** — Infrastructure (devops-engineer)
+- **Magenta** — Data & Docs (data-scientist, technical-writer)
+
+### System prompt structure (consistent across all agents)
+
+Each agent system prompt follows the same three-section pattern:
+
+1. **Core expertise** — bullet list of specific technologies and skills
+2. **Working standards** — concrete rules the agent follows (not vague principles)
+3. **When given a task** — numbered workflow steps for approaching work
+
+## Skill format
+
+Skills live in `skills/<skill-name>/SKILL.md` with YAML frontmatter:
+
+```markdown
+---
+name: skill-name
+description: What this skill does.
+user_invocable: true
+args: optional_arg_description
+---
+
+Skill prompt body...
+```
 
 ## Adding a new agent
 
-1. Create a new `.md` file in `agents/`
-2. Add YAML frontmatter with `name` and `description`
-3. Write the system prompt in the markdown body
-4. The agent will be auto-discovered by Claude Code
+1. Create `agents/<name>.md` with the required frontmatter fields
+2. Follow the three-section system prompt structure
+3. Assign a colour matching the agent's domain category
+4. Update the roster table in this file and in `skills/assemble-team/SKILL.md`
+5. Claude Code auto-discovers agents from the `agents/` directory
 
-## Agent naming
+## Adding a new skill
 
-- Use kebab-case: `javascript-developer`, not `JavaScriptDeveloper`
-- Names should describe the role, not the person: `security-auditor`, not `security-expert-bob`
-- Keep names concise but clear
+1. Create `skills/<name>/SKILL.md` with frontmatter
+2. Set `user_invocable: true` if users should invoke it directly via `/skill-name`
 
 ## Current roster
 
-| Agent | Domain |
-|-------|--------|
-| javascript-developer | JS/TS, Node.js, frontend/backend |
-| react-specialist | React 19, Next.js 15, frontend arch |
-| python-developer | Python, FastAPI, Django |
-| ux-designer | UI/UX, accessibility, design systems |
-| security-auditor | Security, auth, threat modelling |
-| backend-architect | APIs, system design, distributed systems |
-| qa-tester | Test automation, coverage, QA |
-| devops-engineer | CI/CD, Docker, K8s, cloud |
-| data-scientist | ML, data analysis, statistics |
-| technical-writer | Docs, guides, API references |
-| database-specialist | Schema design, queries, migrations |
-| systems-programmer | Rust, Go, C/C++, performance |
+| Colour | Agent | Domain |
+|--------|-------|--------|
+| Blue | javascript-developer | JS/TS, Node.js, frontend/backend |
+| Blue | react-specialist | React 19, Next.js 15, frontend arch |
+| Blue | ux-designer | UI/UX, accessibility, design systems |
+| Green | python-developer | Python, FastAPI, Django |
+| Green | backend-architect | APIs, system design, distributed systems |
+| Green | systems-programmer | Rust, Go, C/C++, performance |
+| Green | database-specialist | Schema design, queries, migrations |
+| Yellow | qa-tester | Test automation, coverage, QA |
+| Red | security-auditor | Security, auth, threat modelling |
+| Cyan | devops-engineer | CI/CD, Docker, K8s, cloud |
+| Magenta | data-scientist | ML, data analysis, statistics |
+| Magenta | technical-writer | Docs, guides, API references |
