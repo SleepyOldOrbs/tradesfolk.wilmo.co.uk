@@ -1,0 +1,15 @@
+{
+  "description": "Quality gates for agent pool teammates",
+  "hooks": {
+    "TeammateIdle": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"${CLAUDE_PLUGIN_ROOT}/hooks/teammate-checklist.sh\""
+          }
+        ]
+      }
+    ]
+  }
+}
