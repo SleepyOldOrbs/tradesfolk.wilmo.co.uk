@@ -61,7 +61,7 @@ Plans:
 **Plans**: 2 plans
 
 Plans:
-- [ ] 03-01-PLAN.md -- Fix frontmatter and sync roster in browse-pool and assemble-team skills
+- [x] 03-01-PLAN.md -- Fix frontmatter and sync roster in browse-pool and assemble-team skills
 - [ ] 03-02-PLAN.md -- Create team-templates skill with 7 pre-built compositions and update CLAUDE.md
 
 ### Phase 4: Integration Testing
@@ -102,6 +102,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 |-------|----------------|--------|-----------|
 | 1. Agent Hardening | 4/4 | Complete | 2026-02-19 |
 | 2. Hook Verification | 1/1 | Complete | 2026-02-19 |
-| 3. Skills Refinement | 0/2 | Not started | - |
+| 3. Skills Refinement | 1/2 | In Progress | - |
 | 4. Integration Testing | 0/? | Not started | - |
 | 5. Documentation and Distribution | 0/? | Not started | - |

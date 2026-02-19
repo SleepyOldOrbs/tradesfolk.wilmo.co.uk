@@ -21,9 +21,9 @@
 
 ### Skills
 
-- [ ] **SKIL-01**: Skill frontmatter uses correct field names per official spec (`user-invocable` not `user_invocable`, `argument-hint` not `args`)
-- [ ] **SKIL-02**: Team-templates skill provides 5-8 pre-built team compositions for common scenarios (full-stack feature, security hardening, new API, etc.)
-- [ ] **SKIL-03**: browse-pool and assemble-team skills are synced with the finalized agent roster
+- [x] **SKIL-01**: Skill frontmatter uses correct field names per official spec (`user-invocable` not `user_invocable`, `argument-hint` not `args`)
+- [x] **SKIL-02**: Team-templates skill provides 5-8 pre-built team compositions for common scenarios (full-stack feature, security hardening, new API, etc.)
+- [x] **SKIL-03**: browse-pool and assemble-team skills are synced with the finalized agent roster
 
 ### Testing
 
@@ -88,9 +88,9 @@
 | HOOK-01 | Phase 2: Hook Verification | Complete |
 | HOOK-02 | Phase 2: Hook Verification | Complete |
 | HOOK-03 | Phase 2: Hook Verification | Complete |
-| SKIL-01 | Phase 3: Skills Refinement | Pending |
-| SKIL-02 | Phase 3: Skills Refinement | Pending |
-| SKIL-03 | Phase 3: Skills Refinement | Pending |
+| SKIL-01 | Phase 3: Skills Refinement | Complete |
+| SKIL-02 | Phase 3: Skills Refinement | Complete |
+| SKIL-03 | Phase 3: Skills Refinement | Complete |
 | TEST-01 | Phase 4: Integration Testing | Pending |
 | TEST-02 | Phase 4: Integration Testing | Pending |
 | DOCS-01 | Phase 5: Documentation and Distribution | Pending |
