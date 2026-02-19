@@ -80,24 +80,24 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| AGNT-01 | Phase 1 | Pending |
-| AGNT-02 | Phase 1 | Pending |
-| AGNT-03 | Phase 1 | Pending |
-| AGNT-04 | Phase 1 | Pending |
-| AGNT-05 | Phase 1 | Pending |
-| HOOK-01 | Phase 2 | Pending |
-| HOOK-02 | Phase 2 | Pending |
-| HOOK-03 | Phase 2 | Pending |
-| SKIL-01 | Phase 3 | Pending |
-| SKIL-02 | Phase 3 | Pending |
-| SKIL-03 | Phase 3 | Pending |
-| TEST-01 | Phase 2 | Pending |
-| TEST-02 | Phase 2 | Pending |
-| DOCS-01 | Phase 4 | Pending |
-| DOCS-02 | Phase 4 | Pending |
-| DOCS-03 | Phase 4 | Pending |
-| DIST-01 | Phase 4 | Pending |
-| DIST-02 | Phase 4 | Pending |
+| AGNT-01 | Phase 1: Agent Hardening | Pending |
+| AGNT-02 | Phase 1: Agent Hardening | Pending |
+| AGNT-03 | Phase 1: Agent Hardening | Pending |
+| AGNT-04 | Phase 1: Agent Hardening | Pending |
+| AGNT-05 | Phase 1: Agent Hardening | Pending |
+| HOOK-01 | Phase 2: Hook Verification | Pending |
+| HOOK-02 | Phase 2: Hook Verification | Pending |
+| HOOK-03 | Phase 2: Hook Verification | Pending |
+| SKIL-01 | Phase 3: Skills Refinement | Pending |
+| SKIL-02 | Phase 3: Skills Refinement | Pending |
+| SKIL-03 | Phase 3: Skills Refinement | Pending |
+| TEST-01 | Phase 4: Integration Testing | Pending |
+| TEST-02 | Phase 4: Integration Testing | Pending |
+| DOCS-01 | Phase 5: Documentation and Distribution | Pending |
+| DOCS-02 | Phase 5: Documentation and Distribution | Pending |
+| DOCS-03 | Phase 5: Documentation and Distribution | Pending |
+| DIST-01 | Phase 5: Documentation and Distribution | Pending |
+| DIST-02 | Phase 5: Documentation and Distribution | Pending |
 
 **Coverage:**
 - v1 requirements: 18 total
@@ -106,4 +106,4 @@
 
 ---
 *Requirements defined: 2026-02-19*
-*Last updated: 2026-02-19 after initial definition*
+*Last updated: 2026-02-19 after roadmap creation (5-phase structure)*
