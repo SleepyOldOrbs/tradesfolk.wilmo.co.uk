@@ -10,28 +10,28 @@ See: .planning/PROJECT.md (updated 2026-02-19)
 ## Current Position
 
 Phase: 1 of 5 (Agent Hardening)
-Plan: 0 of 4 in current phase
-Status: Planned, ready to execute
-Last activity: 2026-02-19 -- Phase 1 planned (4 plans, 2 waves, verified)
+Plan: 3 of 4 in current phase
+Status: Executing
+Last activity: 2026-02-19 -- Plan 01-03 complete (remaining agents: security-auditor, technical-writer, qa-tester, devops-engineer, data-scientist)
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [###░░░░░░░] 15%
 
 ## Performance Metrics
 
 **Velocity:**
-- Total plans completed: 0
-- Average duration: -
-- Total execution time: 0 hours
+- Total plans completed: 3
+- Average duration: 2min
+- Total execution time: 0.1 hours
 
 **By Phase:**
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| - | - | - | - |
+| 01-agent-hardening | 3/4 | 6min | 2min |
 
 **Recent Trend:**
-- Last 5 plans: -
-- Trend: -
+- Last 5 plans: 01-01 (2min), 01-02 (2min), 01-03 (2min)
+- Trend: consistent
 
 *Updated after each plan completion*
 
@@ -44,6 +44,16 @@ Recent decisions affecting current work:
 
 - Roadmap: 5-phase structure derived from 6 requirement categories with testing as its own phase (not merged into hooks/skills)
 - Roadmap: Phase 2 and 3 can execute in parallel (hooks and skills are independent) but sequenced for solo workflow
+- 01-01: ux-designer gets permissionMode: default (not plan) -- actively writes CSS, tokens, and markup files
+- 01-01: ux-designer model set to sonnet -- design/accessibility tasks are well-bounded
+- 01-01: Example commentary references other agents for boundary clarification
+- 01-02: Implementation tier tools for python-developer, backend-architect, database-specialist
+- 01-02: Full access tier for systems-programmer (WebFetch, WebSearch, TodoWrite)
+- 01-02: backend-architect set to permissionMode: plan for design/review mode
+- 01-02: All 4 backend agents keep model: inherit for flexibility
+- 01-03: security-auditor uses model: inherit -- complex security reasoning needs the best model
+- 01-03: technical-writer uses model: sonnet -- lightweight documentation tasks
+- 01-03: data-scientist commentary explicitly distinguishes from python-developer scope
 
 ### Pending Todos
 
@@ -58,5 +68,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-19
-Stopped at: Phase 1 planned, auto-advancing to execute-phase
-Resume file: .planning/phases/01-agent-hardening/01-01-PLAN.md
+Stopped at: Completed 01-03-PLAN.md (remaining agents hardening)
+Resume file: .planning/phases/01-agent-hardening/01-04-PLAN.md

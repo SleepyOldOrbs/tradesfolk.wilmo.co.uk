@@ -7,11 +7,11 @@
 
 ### Agent Quality
 
-- [ ] **AGNT-01**: All 12 agent descriptions include natural-language task examples that trigger delegation (2-3 examples per agent)
-- [ ] **AGNT-02**: Safety-critical agents have tool restrictions via `tools` frontmatter (security-auditor: Read, Grep, Glob, Bash; technical-writer: Read, Grep, Glob, Write, Edit)
-- [ ] **AGNT-03**: Security-auditor uses `permissionMode: plan` (read-only exploration by default)
-- [ ] **AGNT-04**: Technical-writer uses `permissionMode: acceptEdits` (auto-accept file edits)
-- [ ] **AGNT-05**: All agent descriptions are concise enough to fit within the 2% context window budget with 12+ agents loaded
+- [x] **AGNT-01**: All 12 agent descriptions include natural-language task examples that trigger delegation (2-3 examples per agent)
+- [x] **AGNT-02**: Safety-critical agents have tool restrictions via `tools` frontmatter (security-auditor: Read, Grep, Glob, Bash; technical-writer: Read, Grep, Glob, Write, Edit)
+- [x] **AGNT-03**: Security-auditor uses `permissionMode: plan` (read-only exploration by default)
+- [x] **AGNT-04**: Technical-writer uses `permissionMode: acceptEdits` (auto-accept file edits)
+- [x] **AGNT-05**: All agent descriptions are concise enough to fit within the 2% context window budget with 12+ agents loaded
 
 ### Hooks
 
@@ -80,11 +80,11 @@
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| AGNT-01 | Phase 1: Agent Hardening | Pending |
-| AGNT-02 | Phase 1: Agent Hardening | Pending |
-| AGNT-03 | Phase 1: Agent Hardening | Pending |
-| AGNT-04 | Phase 1: Agent Hardening | Pending |
-| AGNT-05 | Phase 1: Agent Hardening | Pending |
+| AGNT-01 | Phase 1: Agent Hardening | Complete |
+| AGNT-02 | Phase 1: Agent Hardening | Complete |
+| AGNT-03 | Phase 1: Agent Hardening | Complete |
+| AGNT-04 | Phase 1: Agent Hardening | Complete |
+| AGNT-05 | Phase 1: Agent Hardening | Complete |
 | HOOK-01 | Phase 2: Hook Verification | Pending |
 | HOOK-02 | Phase 2: Hook Verification | Pending |
 | HOOK-03 | Phase 2: Hook Verification | Pending |
