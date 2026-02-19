@@ -27,8 +27,8 @@
 
 ### Testing
 
-- [ ] **TEST-01**: Plugin tested end-to-end in a real Agent Team session (agents discoverable, system prompts load, skills invocable)
-- [ ] **TEST-02**: Plugin install via `claude plugin add` or `--plugin-dir` verified working
+- [x] **TEST-01**: Plugin tested end-to-end in a real Agent Team session (agents discoverable, system prompts load, skills invocable)
+- [x] **TEST-02**: Plugin install via `claude plugin add` or `--plugin-dir` verified working
 
 ### Documentation
 
@@ -91,8 +91,8 @@
 | SKIL-01 | Phase 3: Skills Refinement | Complete |
 | SKIL-02 | Phase 3: Skills Refinement | Complete |
 | SKIL-03 | Phase 3: Skills Refinement | Complete |
-| TEST-01 | Phase 4: Integration Testing | Pending |
-| TEST-02 | Phase 4: Integration Testing | Pending |
+| TEST-01 | Phase 4: Integration Testing | Complete |
+| TEST-02 | Phase 4: Integration Testing | Complete |
 | DOCS-01 | Phase 5: Documentation and Distribution | Pending |
 | DOCS-02 | Phase 5: Documentation and Distribution | Pending |
 | DOCS-03 | Phase 5: Documentation and Distribution | Pending |
