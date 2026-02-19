@@ -7,7 +7,6 @@
   },
   "license": "MIT",
   "keywords": ["agents", "agent-teams", "specialist", "pool", "roster"],
-  "agents": "./agents/",
   "skills": "./skills/",
   "hooks": "./hooks/hooks.json"
 }
