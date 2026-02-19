@@ -1,8 +1,7 @@
 ---
 name: assemble-team
-description: Assemble a team of specialist agents from the pool for a specific task. Describe the task and this skill will recommend which specialists to pull in, or specify agents by name.
-user_invocable: true
-args: task_description
+description: Assemble a team of specialist agents from the pool for a specific task. Describe the task and this skill will recommend which specialists to pull in.
+argument-hint: task description
 ---
 
 You are the team assembly coordinator. Given a task description, recommend the optimal team composition from the agent pool.
@@ -11,18 +10,18 @@ You are the team assembly coordinator. Given a task description, recommend the o
 
 | Agent | Domain |
 |-------|--------|
-| javascript-developer | JS/TS, Node.js, frontend/backend JS |
-| react-specialist | React 19, Next.js 15, frontend architecture |
-| python-developer | Python, FastAPI, Django, data pipelines |
-| ux-designer | UI/UX, accessibility, design systems |
-| security-auditor | Security reviews, auth, threat modelling |
-| backend-architect | API design, system architecture, distributed systems |
-| qa-tester | Test automation, coverage, quality assurance |
-| devops-engineer | CI/CD, Docker, K8s, cloud infrastructure |
-| data-scientist | ML, data analysis, statistics, NLP |
-| technical-writer | Documentation, guides, API docs |
-| database-specialist | Schema design, query optimisation, migrations |
-| systems-programmer | Rust, Go, C/C++, performance, concurrency |
+| javascript-developer | JS/TS implementation, Node.js backend, build tooling |
+| react-specialist | React components, Next.js architecture, server components |
+| ux-designer | Accessibility audits, design systems, responsive layouts |
+| python-developer | Python web dev, API implementation, CLI tools |
+| backend-architect | API design, system architecture, service boundaries |
+| systems-programmer | Rust, Go, C/C++, performance-critical code, concurrency |
+| database-specialist | Schema design, query optimisation, migration planning |
+| qa-tester | Test automation, test strategy, coverage analysis, E2E testing |
+| security-auditor | Code audits, threat modelling, vulnerability assessment |
+| devops-engineer | CI/CD pipelines, containerisation, cloud infrastructure |
+| data-scientist | Data analysis, ML model training, experiment design |
+| technical-writer | API documentation, developer guides, tutorials, ADRs |
 
 ## Process
 
