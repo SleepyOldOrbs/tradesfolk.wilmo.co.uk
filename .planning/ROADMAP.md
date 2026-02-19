@@ -29,11 +29,13 @@ Decimal phases appear between their surrounding integers in numeric order.
   2. Security-auditor agent has tool restrictions limiting it to read-only tools (Read, Grep, Glob, Bash) and runs in plan permission mode
   3. Technical-writer agent has tool restrictions limiting it to documentation tools (Read, Grep, Glob, Write, Edit) and runs in acceptEdits permission mode
   4. All 12 agent descriptions fit within the 2% context window budget when loaded simultaneously (descriptions are concise, under 200 characters)
-**Plans**: TBD
+**Plans**: 4 plans
 
 Plans:
-- [ ] 01-01: TBD
-- [ ] 01-02: TBD
+- [ ] 01-01-PLAN.md -- Rewrite frontend agents (javascript-developer, react-specialist, ux-designer)
+- [ ] 01-02-PLAN.md -- Rewrite backend agents (python-developer, backend-architect, systems-programmer, database-specialist)
+- [ ] 01-03-PLAN.md -- Rewrite remaining agents (qa-tester, security-auditor, devops-engineer, data-scientist, technical-writer)
+- [ ] 01-04-PLAN.md -- Rename files with number prefixes, update CLAUDE.md, verify all requirements
 
 ### Phase 2: Hook Verification
 **Goal**: The TeammateIdle hook is verified working in a real Agent Teams environment, portable across systems, and resilient to plugin installation paths
@@ -98,7 +100,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Agent Hardening | 0/? | Not started | - |
+| 1. Agent Hardening | 0/4 | Planned | - |
 | 2. Hook Verification | 0/? | Not started | - |
 | 3. Skills Refinement | 0/? | Not started | - |
 | 4. Integration Testing | 0/? | Not started | - |
