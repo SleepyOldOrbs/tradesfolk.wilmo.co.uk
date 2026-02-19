@@ -45,10 +45,10 @@ Plans:
   1. The TeammateIdle hook fires correctly when a teammate goes idle during an Agent Teams session
   2. The hook script has a portable shebang (`#!/usr/bin/env bash`), executable bit is tracked in git, and runs without errors on a clean system
   3. Hook script paths use relative references or `${CLAUDE_PLUGIN_ROOT}` that resolve correctly after plugin installation via cache copying
-**Plans**: TBD
+**Plans**: 1 plan
 
 Plans:
-- [ ] 02-01: TBD
+- [ ] 02-01-PLAN.md -- Harden hook script for portability (shebang, jq removal, executable bit) and verify hooks.json configuration
 
 ### Phase 3: Skills Refinement
 **Goal**: All skills use correct frontmatter, the team-templates skill provides pre-built compositions, and existing skills reflect the finalized agent roster
@@ -101,7 +101,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Agent Hardening | 4/4 | Complete | 2026-02-19 |
-| 2. Hook Verification | 0/? | Not started | - |
+| 2. Hook Verification | 0/1 | In progress | - |
 | 3. Skills Refinement | 0/? | Not started | - |
 | 4. Integration Testing | 0/? | Not started | - |
 | 5. Documentation and Distribution | 0/? | Not started | - |
