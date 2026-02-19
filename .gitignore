@@ -1,4 +1,21 @@
 .DS_Store
 Thumbs.db
 *.swp
+*.swo
 *~
+
+# Planning and development artifacts
+.planning/
+
+# Status file (internal project tracking)
+STATUS.md
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+Desktop.ini
+
+# User ideas file
+your-idea.md
