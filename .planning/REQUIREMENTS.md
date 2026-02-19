@@ -15,9 +15,9 @@
 
 ### Hooks
 
-- [ ] **HOOK-01**: TeammateIdle hook event name verified working in a real Agent Teams session
-- [ ] **HOOK-02**: Hook script has correct shebang (`#!/usr/bin/env bash`) and executable bit tracked in git
-- [ ] **HOOK-03**: Hook script paths use relative references that survive plugin cache copying
+- [x] **HOOK-01**: TeammateIdle hook event name verified working in a real Agent Teams session
+- [x] **HOOK-02**: Hook script has correct shebang (`#!/usr/bin/env bash`) and executable bit tracked in git
+- [x] **HOOK-03**: Hook script paths use relative references that survive plugin cache copying
 
 ### Skills
 
@@ -85,9 +85,9 @@
 | AGNT-03 | Phase 1: Agent Hardening | Complete |
 | AGNT-04 | Phase 1: Agent Hardening | Complete |
 | AGNT-05 | Phase 1: Agent Hardening | Complete |
-| HOOK-01 | Phase 2: Hook Verification | Pending |
-| HOOK-02 | Phase 2: Hook Verification | Pending |
-| HOOK-03 | Phase 2: Hook Verification | Pending |
+| HOOK-01 | Phase 2: Hook Verification | Complete |
+| HOOK-02 | Phase 2: Hook Verification | Complete |
+| HOOK-03 | Phase 2: Hook Verification | Complete |
 | SKIL-01 | Phase 3: Skills Refinement | Pending |
 | SKIL-02 | Phase 3: Skills Refinement | Pending |
 | SKIL-03 | Phase 3: Skills Refinement | Pending |
