@@ -72,10 +72,11 @@ Plans:
   1. In a real Agent Teams session, the Team Lead can discover agents from the pool, delegate tasks to them, and their system prompts load correctly
   2. Skills (browse-pool, assemble-team, team-templates) are invocable during a session and return correct, useful output
   3. Plugin installs successfully via `claude plugin add` or `--plugin-dir` and all components (agents, skills, hooks) are discoverable after installation
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 04-01: TBD
+- [ ] 04-01-PLAN.md -- Fix plugin.json validation bug and run automated structural validation of all components
+- [ ] 04-02-PLAN.md -- Test runtime behavior via --plugin-dir, installation methods, and produce test report
 
 ### Phase 5: Documentation and Distribution
 **Goal**: The plugin is documented for users, versioned for updates, and published on GitHub for public installation
@@ -103,5 +104,5 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | 1. Agent Hardening | 4/4 | Complete | 2026-02-19 |
 | 2. Hook Verification | 1/1 | Complete | 2026-02-19 |
 | 3. Skills Refinement | 2/2 | Complete | 2026-02-19 |
-| 4. Integration Testing | 0/? | Not started | - |
+| 4. Integration Testing | 0/2 | In progress | - |
 | 5. Documentation and Distribution | 0/? | Not started | - |
