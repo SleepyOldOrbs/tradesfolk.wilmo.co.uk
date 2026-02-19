@@ -17,18 +17,18 @@ agent-pool/
 ├── .claude-plugin/
 │   └── plugin.json          # Plugin manifest
 ├── agents/                   # 12 specialist agent definitions
-│   ├── javascript-developer.md
-│   ├── react-specialist.md
-│   ├── ux-designer.md
-│   ├── python-developer.md
-│   ├── backend-architect.md
-│   ├── systems-programmer.md
-│   ├── database-specialist.md
-│   ├── qa-tester.md
-│   ├── security-auditor.md
-│   ├── devops-engineer.md
-│   ├── data-scientist.md
-│   └── technical-writer.md
+│   ├── 01-javascript-developer.md
+│   ├── 02-react-specialist.md
+│   ├── 03-ux-designer.md
+│   ├── 04-python-developer.md
+│   ├── 05-backend-architect.md
+│   ├── 06-systems-programmer.md
+│   ├── 07-database-specialist.md
+│   ├── 08-qa-tester.md
+│   ├── 09-security-auditor.md
+│   ├── 10-devops-engineer.md
+│   ├── 11-data-scientist.md
+│   └── 12-technical-writer.md
 ├── skills/
 │   ├── browse-pool/SKILL.md  # View the agent roster
 │   └── assemble-team/SKILL.md # Get team recommendations for a task
@@ -50,7 +50,19 @@ Each agent is a markdown file in `agents/` with YAML frontmatter:
 name: kebab-case-name
 model: inherit
 color: blue
-description: One-line summary of expertise and when to use this agent.
+tools: Read, Grep, Glob, Write, Edit, Bash, MultiEdit, NotebookEdit
+permissionMode: default
+description: >
+  Use this agent for [task type]. Expert in [domain]. Specializes in [specifics].
+
+  <example>
+  Context: [scenario]
+  user: "[request]"
+  assistant: "[delegation response]"
+  <commentary>
+  [Why this agent is the right match]
+  </commentary>
+  </example>
 ---
 
 System prompt body goes here...
@@ -63,7 +75,18 @@ System prompt body goes here...
 | `name` | kebab-case, 3-50 chars | Agent identifier |
 | `model` | `inherit`, `sonnet`, `opus`, `haiku` | Which Claude model to use |
 | `color` | `blue`, `cyan`, `green`, `yellow`, `magenta`, `red` | Terminal display colour |
-| `description` | Free text | Used by Claude Code for agent discovery/matching |
+| `tools` | Comma-separated tool names | Allowlist of tools the agent can use |
+| `permissionMode` | `default`, `acceptEdits`, `plan`, `dontAsk`, `bypassPermissions` | How the agent handles permission prompts |
+| `description` | Free text with `<example>` blocks | Used by Claude Code for agent discovery/matching |
+
+### Tool tiers
+
+| Tier | Tools | Used By |
+|------|-------|---------|
+| Read-only | Read, Grep, Glob, Bash, NotebookRead | security-auditor |
+| Documentation | Read, Grep, Glob, Write, Edit, Bash | technical-writer, ux-designer |
+| Implementation | Read, Grep, Glob, Write, Edit, Bash, MultiEdit, NotebookEdit | javascript-developer, react-specialist, python-developer, backend-architect, database-specialist |
+| Full access | Read, Grep, Glob, Write, Edit, Bash, MultiEdit, NotebookEdit, WebFetch, WebSearch, TodoWrite | qa-tester, devops-engineer, systems-programmer, data-scientist |
 
 ### Colour scheme by domain
 
@@ -99,30 +122,36 @@ Skill prompt body...
 
 ## Adding a new agent
 
-1. Create `agents/<name>.md` with the required frontmatter fields
+1. Create `agents/<NN>-<name>.md` with the required frontmatter fields (use the next available number prefix)
 2. Follow the three-section system prompt structure
-3. Assign a colour matching the agent's domain category
-4. Update the roster table in this file and in `skills/assemble-team/SKILL.md`
-5. Claude Code auto-discovers agents from the `agents/` directory
+3. Include 3 `<example>` blocks in the description for delegation matching
+4. Assign a colour matching the agent's domain category
+5. Choose the appropriate tools tier and permission mode
+6. Update the roster table in this file and in `skills/assemble-team/SKILL.md`
+7. Claude Code auto-discovers agents from the `agents/` directory
 
 ## Adding a new skill
 
 1. Create `skills/<name>/SKILL.md` with frontmatter
 2. Set `user_invocable: true` if users should invoke it directly via `/skill-name`
 
+## Context budget
+
+With 12 agents loaded, total description text (including `<example>` blocks) is approximately 39,000 characters. This is within acceptable bounds for Claude Code's context window. Keep agent descriptions focused and avoid unnecessary verbosity to maintain room for other context sources.
+
 ## Current roster
 
-| Colour | Agent | Domain |
-|--------|-------|--------|
-| Blue | javascript-developer | JS/TS, Node.js, frontend/backend |
-| Blue | react-specialist | React 19, Next.js 15, frontend arch |
-| Blue | ux-designer | UI/UX, accessibility, design systems |
-| Green | python-developer | Python, FastAPI, Django |
-| Green | backend-architect | APIs, system design, distributed systems |
-| Green | systems-programmer | Rust, Go, C/C++, performance |
-| Green | database-specialist | Schema design, queries, migrations |
-| Yellow | qa-tester | Test automation, coverage, QA |
-| Red | security-auditor | Security, auth, threat modelling |
-| Cyan | devops-engineer | CI/CD, Docker, K8s, cloud |
-| Magenta | data-scientist | ML, data analysis, statistics |
-| Magenta | technical-writer | Docs, guides, API references |
+| Colour | Agent | File | Domain | Tools Tier | Permission |
+|--------|-------|------|--------|------------|------------|
+| Blue | javascript-developer | `01-javascript-developer.md` | JS/TS, Node.js, frontend/backend | Implementation | default |
+| Blue | react-specialist | `02-react-specialist.md` | React 19, Next.js 15, frontend arch | Implementation | default |
+| Blue | ux-designer | `03-ux-designer.md` | UI/UX, accessibility, design systems | Documentation | default |
+| Green | python-developer | `04-python-developer.md` | Python, FastAPI, Django | Implementation | default |
+| Green | backend-architect | `05-backend-architect.md` | APIs, system design, distributed systems | Implementation | plan |
+| Green | systems-programmer | `06-systems-programmer.md` | Rust, Go, C/C++, performance | Full access | default |
+| Green | database-specialist | `07-database-specialist.md` | Schema design, queries, migrations | Implementation | default |
+| Yellow | qa-tester | `08-qa-tester.md` | Test automation, coverage, QA | Full access | default |
+| Red | security-auditor | `09-security-auditor.md` | Security, auth, threat modelling | Read-only | plan |
+| Cyan | devops-engineer | `10-devops-engineer.md` | CI/CD, Docker, K8s, cloud | Full access | default |
+| Magenta | data-scientist | `11-data-scientist.md` | ML, data analysis, statistics | Full access | default |
+| Magenta | technical-writer | `12-technical-writer.md` | Docs, guides, API references | Documentation | acceptEdits |

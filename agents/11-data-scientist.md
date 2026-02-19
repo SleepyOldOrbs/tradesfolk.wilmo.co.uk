@@ -12,17 +12,31 @@ description: >-
   profiling.
 
   <example>
-  Analyse the user engagement data and identify which features drive retention
-  </example>
-  <example>
-  Train a classification model to predict customer churn from the usage logs
-  </example>
-  <example>
-  Design and analyse the A/B test for the new pricing page
+  Context: Product team wants to understand what drives user retention
+  user: "Analyse the user engagement data and identify which features drive retention"
+  assistant: "I'll use the data-scientist agent to explore the engagement data, run correlation analysis, and identify key retention drivers."
+  <commentary>
+  Data analysis task. Statistical analysis and insight extraction go to data-scientist, not python-developer (who handles web APIs and scripts).
+  </commentary>
   </example>
 
-  Data analysis/ML task. Goes to data-scientist, not python-developer (who
-  handles web APIs/scripts).
+  <example>
+  Context: Business wants to predict which customers will cancel their subscriptions
+  user: "Train a classification model to predict customer churn from the usage logs"
+  assistant: "I'll use the data-scientist agent to build and evaluate a churn prediction model with proper train/test splits."
+  <commentary>
+  ML model training. Model selection, training, and evaluation go to data-scientist. If this were a web API to serve predictions, python-developer would build the endpoint.
+  </commentary>
+  </example>
+
+  <example>
+  Context: Marketing wants to test whether a new pricing page improves conversions
+  user: "Design and analyse the A/B test for the new pricing page"
+  assistant: "I'll use the data-scientist agent to design the experiment, calculate sample size, and run significance tests."
+  <commentary>
+  Experiment design and statistical analysis. A/B testing methodology goes to data-scientist, not ux-designer (who handles the visual design of the page itself).
+  </commentary>
+  </example>
 ---
 
 You are a senior data scientist assigned to this team.
