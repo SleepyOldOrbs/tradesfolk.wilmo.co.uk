@@ -31,11 +31,16 @@ Every specialist agent must have a battle-tested system prompt with clear expert
 - ✓ `team-templates` skill with 7 pre-built compositions and `disable-model-invocation: true` — Phase 3
 - ✓ browse-pool and assemble-team synced with 12-agent roster and Phase 1 descriptions — Phase 3
 - ✓ CLAUDE.md skill format example updated to match official spec — Phase 3
+- ✓ `plugin.json` agents field removed for auto-discovery (fixes GitHub #21598 validation bug) — Phase 4
+- ✓ `claude plugin validate` passes cleanly (exit 0) — Phase 4
+- ✓ Plugin loads via `--plugin-dir` with all 12 agents discoverable under `agent-pool:` prefix — Phase 4
+- ✓ 50/50 automated structural checks pass (agents, skills, hooks) — Phase 4
+- ✓ Test report with manual instructions for interactive features — Phase 4
 
 ### Active
 
-- [ ] Live runtime verification of TeammateIdle hook in Agent Teams session (deferred to Phase 4)
-- [ ] End-to-end testing in a real Agent Team session
+- [ ] Interactive skill invocation testing (/browse-pool, /assemble-team, /team-templates) — deferred from Phase 4, manual instructions in test report
+- [ ] Live Agent Teams delegation and `<example>` block routing validation — deferred from Phase 4
 - [ ] Additional specialist agents (mobile-developer, ml-engineer, etc.) where they cover distinct expertise
 - [ ] Push to GitHub as a public repo
 - [ ] User-facing README.md with install instructions and usage examples
@@ -79,6 +84,8 @@ Every specialist agent must have a battle-tested system prompt with clear expert
 | 4-tier tool restrictions | Read-only, Documentation, Implementation, Full access tiers mapped by agent role | Phase 1: Implemented |
 | backend-architect uses `permissionMode: plan` | Design/review role — proposes changes rather than making them directly | Phase 1: Implemented |
 | Positive framing in agent descriptions | Commentary uses "operates in X mode" not "cannot do Y" — avoids confusion | Phase 1: Implemented |
+| Remove `agents` field from plugin.json | Auto-discovery works without it; string format fails validator (GitHub #21598) | Phase 4: Fixed |
+| `--plugin-dir` for local testing | `claude plugin install` requires marketplace; `--plugin-dir` is the correct dev method | Phase 4: Documented |
 
 ---
-*Last updated: 2026-02-19 after Phase 3 (Skills Refinement)*
+*Last updated: 2026-02-19 after Phase 4 (Integration Testing)*
