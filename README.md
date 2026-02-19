@@ -46,8 +46,8 @@ Loads the plugin for the current session only. No permanent changes.
 ### From GitHub
 
 ```bash
-git clone https://github.com/SleepyOldOrbs/claude-code-agent-pool.git
-claude --plugin-dir ./claude-code-agent-pool
+git clone https://github.com/SleepyOldOrbs/tradesfolk.wilmo.co.uk.git
+claude --plugin-dir ./tradesfolk.wilmo.co.uk
 ```
 
 Marketplace installation will be available in a future release.

@@ -30,4 +30,4 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Portable hook script (`#!/usr/bin/env bash`, no external dependencies)
 - MIT license
 
-[1.0.0]: https://github.com/SleepyOldOrbs/claude-code-agent-pool/releases/tag/v1.0.0
+[1.0.0]: https://github.com/SleepyOldOrbs/tradesfolk.wilmo.co.uk/releases/tag/v1.0.0
