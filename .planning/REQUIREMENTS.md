@@ -32,14 +32,14 @@
 
 ### Documentation
 
-- [ ] **DOCS-01**: README.md with install instructions, what the plugin does, agent roster table, usage examples
-- [ ] **DOCS-02**: CHANGELOG.md starting at v1.0.0 with current state
-- [ ] **DOCS-03**: Agent Teams experimental prerequisite documented (CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1)
+- [x] **DOCS-01**: README.md with install instructions, what the plugin does, agent roster table, usage examples
+- [x] **DOCS-02**: CHANGELOG.md starting at v1.0.0 with current state
+- [x] **DOCS-03**: Agent Teams experimental prerequisite documented (CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=1)
 
 ### Distribution
 
 - [ ] **DIST-01**: Plugin pushed to GitHub as a public repository
-- [ ] **DIST-02**: Semantic versioning maintained in plugin.json (version bumped with every release)
+- [x] **DIST-02**: Semantic versioning maintained in plugin.json (version bumped with every release)
 
 ## v2 Requirements
 
@@ -93,11 +93,11 @@
 | SKIL-03 | Phase 3: Skills Refinement | Complete |
 | TEST-01 | Phase 4: Integration Testing | Complete |
 | TEST-02 | Phase 4: Integration Testing | Complete |
-| DOCS-01 | Phase 5: Documentation and Distribution | Pending |
-| DOCS-02 | Phase 5: Documentation and Distribution | Pending |
-| DOCS-03 | Phase 5: Documentation and Distribution | Pending |
+| DOCS-01 | Phase 5: Documentation and Distribution | Complete |
+| DOCS-02 | Phase 5: Documentation and Distribution | Complete |
+| DOCS-03 | Phase 5: Documentation and Distribution | Complete |
 | DIST-01 | Phase 5: Documentation and Distribution | Pending |
-| DIST-02 | Phase 5: Documentation and Distribution | Pending |
+| DIST-02 | Phase 5: Documentation and Distribution | Complete |
 
 **Coverage:**
 - v1 requirements: 18 total
