@@ -19,10 +19,14 @@ Every specialist agent must have a battle-tested system prompt with clear expert
 - ✓ TeammateIdle hook — lightweight logging when teammates go idle
 - ✓ Domain colour-coding scheme (blue/green/yellow/red/cyan/magenta)
 - ✓ MIT license and .gitignore
+- ✓ All 12 agents have 3 `<example>` blocks for delegation matching — Phase 1
+- ✓ Safety-critical agents have tool restrictions (security-auditor: read-only, technical-writer: docs-only) — Phase 1
+- ✓ Security-auditor uses `permissionMode: plan` — Phase 1
+- ✓ Technical-writer uses `permissionMode: acceptEdits` — Phase 1
+- ✓ All agent descriptions fit within 2% context budget (3,903 chars total) — Phase 1
 
 ### Active
 
-- [ ] Add `<example>` blocks to all 12 agent descriptions for better auto-matching
 - [ ] Verify TeammateIdle hook event name works in current Claude Code version
 - [ ] End-to-end testing in a real Agent Team session
 - [ ] Additional specialist agents (mobile-developer, ml-engineer, etc.) where they cover distinct expertise
@@ -59,11 +63,14 @@ Every specialist agent must have a battle-tested system prompt with clear expert
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| All agents use `model: inherit` | Lets user's config decide — avoids hard-coding cost/capability tradeoffs | — Pending |
-| Colour-coded by domain | Visual distinction in terminal without requiring UI changes | — Pending |
-| Three-section prompt pattern | Consistency means Team Lead knows what to expect from any specialist | — Pending |
+| Most agents use `model: inherit`, except ux-designer and technical-writer use `sonnet` | Inherit lets user config decide; sonnet for lightweight design/docs tasks saves cost | Phase 1: Implemented |
+| Colour-coded by domain | Visual distinction in terminal without requiring UI changes | Phase 1: Implemented |
+| Three-section prompt pattern | Consistency means Team Lead knows what to expect from any specialist | Phase 1: All 12 agents follow pattern |
 | Skills over commands | More natural fit for "ask Claude" interaction pattern | — Pending |
 | Lightweight hooks only | Not all agents produce testable output; heavy gates would block inappropriately | — Pending |
+| 4-tier tool restrictions | Read-only, Documentation, Implementation, Full access tiers mapped by agent role | Phase 1: Implemented |
+| backend-architect uses `permissionMode: plan` | Design/review role — proposes changes rather than making them directly | Phase 1: Implemented |
+| Positive framing in agent descriptions | Commentary uses "operates in X mode" not "cannot do Y" — avoids confusion | Phase 1: Implemented |
 
 ---
-*Last updated: 2026-02-19 after initialization*
+*Last updated: 2026-02-19 after Phase 1 (Agent Hardening)*

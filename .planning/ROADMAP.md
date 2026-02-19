@@ -12,7 +12,7 @@ This roadmap takes the Agent Pool plugin from a working prototype (12 agents, 2 
 
 Decimal phases appear between their surrounding integers in numeric order.
 
-- [ ] **Phase 1: Agent Hardening** - Refine all 12 agent definitions for reliable discovery, safety defaults, and context efficiency
+- [x] **Phase 1: Agent Hardening** - Refine all 12 agent definitions for reliable discovery, safety defaults, and context efficiency
 - [ ] **Phase 2: Hook Verification** - Verify and fix the TeammateIdle hook for portability and real-world use
 - [ ] **Phase 3: Skills Refinement** - Fix skill frontmatter, build team-templates skill, and sync skills with finalized roster
 - [ ] **Phase 4: Integration Testing** - Validate the complete plugin end-to-end in a real Agent Teams session
@@ -35,7 +35,7 @@ Plans:
 - [x] 01-01-PLAN.md -- Rewrite frontend agents (javascript-developer, react-specialist, ux-designer)
 - [x] 01-02-PLAN.md -- Rewrite backend agents (python-developer, backend-architect, systems-programmer, database-specialist)
 - [x] 01-03-PLAN.md -- Rewrite remaining agents (qa-tester, security-auditor, devops-engineer, data-scientist, technical-writer)
-- [ ] 01-04-PLAN.md -- Rename files with number prefixes, update CLAUDE.md, verify all requirements
+- [x] 01-04-PLAN.md -- Rename files with number prefixes, update CLAUDE.md, verify all requirements
 
 ### Phase 2: Hook Verification
 **Goal**: The TeammateIdle hook is verified working in a real Agent Teams environment, portable across systems, and resilient to plugin installation paths
@@ -100,7 +100,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. Agent Hardening | 3/4 | In Progress | - |
+| 1. Agent Hardening | 4/4 | Complete | 2026-02-19 |
 | 2. Hook Verification | 0/? | Not started | - |
 | 3. Skills Refinement | 0/? | Not started | - |
 | 4. Integration Testing | 0/? | Not started | - |
