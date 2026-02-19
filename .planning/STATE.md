@@ -73,5 +73,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-19
-Stopped at: Phase 4 complete, ready for Phase 5
-Resume file: .planning/STATE.md
+Stopped at: Phase 5 context gathered
+Resume file: .planning/phases/05-documentation-and-distribution/05-CONTEXT.md
