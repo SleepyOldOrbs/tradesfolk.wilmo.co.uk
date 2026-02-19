@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Agent Hardening** - Refine all 12 agent definitions for reliable discovery, safety defaults, and context efficiency
 - [x] **Phase 2: Hook Verification** - Verify and fix the TeammateIdle hook for portability and real-world use
-- [ ] **Phase 3: Skills Refinement** - Fix skill frontmatter, build team-templates skill, and sync skills with finalized roster
+- [x] **Phase 3: Skills Refinement** - Fix skill frontmatter, build team-templates skill, and sync skills with finalized roster
 - [ ] **Phase 4: Integration Testing** - Validate the complete plugin end-to-end in a real Agent Teams session
 - [ ] **Phase 5: Documentation and Distribution** - Write README and CHANGELOG, push to GitHub with proper versioning
 
@@ -62,7 +62,7 @@ Plans:
 
 Plans:
 - [x] 03-01-PLAN.md -- Fix frontmatter and sync roster in browse-pool and assemble-team skills
-- [ ] 03-02-PLAN.md -- Create team-templates skill with 7 pre-built compositions and update CLAUDE.md
+- [x] 03-02-PLAN.md -- Create team-templates skill with 7 pre-built compositions and update CLAUDE.md
 
 ### Phase 4: Integration Testing
 **Goal**: The complete plugin is verified working end-to-end -- agents load, skills invoke, hooks fire, and installation succeeds
@@ -102,6 +102,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 |-------|----------------|--------|-----------|
 | 1. Agent Hardening | 4/4 | Complete | 2026-02-19 |
 | 2. Hook Verification | 1/1 | Complete | 2026-02-19 |
-| 3. Skills Refinement | 1/2 | In Progress | - |
+| 3. Skills Refinement | 2/2 | Complete | 2026-02-19 |
 | 4. Integration Testing | 0/? | Not started | - |
 | 5. Documentation and Distribution | 0/? | Not started | - |

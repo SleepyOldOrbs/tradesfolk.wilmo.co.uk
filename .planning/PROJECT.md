@@ -27,13 +27,16 @@ Every specialist agent must have a battle-tested system prompt with clear expert
 - ✓ Hook script portable (no jq, `#!/usr/bin/env bash`, executable bit tracked in git) — Phase 2
 - ✓ hooks.json schema and TeammateIdle event name verified against official Claude Code docs — Phase 2
 - ✓ `${CLAUDE_PLUGIN_ROOT}` path resolution confirmed for plugin cache copying — Phase 2
+- ✓ All skill frontmatter uses official kebab-case field names (`argument-hint`, no `user_invocable`) — Phase 3
+- ✓ `team-templates` skill with 7 pre-built compositions and `disable-model-invocation: true` — Phase 3
+- ✓ browse-pool and assemble-team synced with 12-agent roster and Phase 1 descriptions — Phase 3
+- ✓ CLAUDE.md skill format example updated to match official spec — Phase 3
 
 ### Active
 
 - [ ] Live runtime verification of TeammateIdle hook in Agent Teams session (deferred to Phase 4)
 - [ ] End-to-end testing in a real Agent Team session
 - [ ] Additional specialist agents (mobile-developer, ml-engineer, etc.) where they cover distinct expertise
-- [ ] `team-templates` skill — pre-built team compositions for common scenarios
 - [ ] Push to GitHub as a public repo
 - [ ] User-facing README.md with install instructions and usage examples
 - [ ] TaskCompleted hook for quality verification on task completion
@@ -69,11 +72,13 @@ Every specialist agent must have a battle-tested system prompt with clear expert
 | Most agents use `model: inherit`, except ux-designer and technical-writer use `sonnet` | Inherit lets user config decide; sonnet for lightweight design/docs tasks saves cost | Phase 1: Implemented |
 | Colour-coded by domain | Visual distinction in terminal without requiring UI changes | Phase 1: Implemented |
 | Three-section prompt pattern | Consistency means Team Lead knows what to expect from any specialist | Phase 1: All 12 agents follow pattern |
-| Skills over commands | More natural fit for "ask Claude" interaction pattern | — Pending |
-| Lightweight hooks only | Not all agents produce testable output; heavy gates would block inappropriately | — Pending |
+| Skills over commands | More natural fit for "ask Claude" interaction pattern | Phase 3: 3 skills implemented |
+| Lightweight hooks only | Not all agents produce testable output; heavy gates would block inappropriately | Phase 2: Verified |
+| Omit `user-invocable` when true (default) | Cleaner YAML; only set explicitly when `false` needed | Phase 3: Implemented |
+| `disable-model-invocation: true` for team-templates | User-triggered reference card; Claude uses assemble-team for active recs | Phase 3: Implemented |
 | 4-tier tool restrictions | Read-only, Documentation, Implementation, Full access tiers mapped by agent role | Phase 1: Implemented |
 | backend-architect uses `permissionMode: plan` | Design/review role — proposes changes rather than making them directly | Phase 1: Implemented |
 | Positive framing in agent descriptions | Commentary uses "operates in X mode" not "cannot do Y" — avoids confusion | Phase 1: Implemented |
 
 ---
-*Last updated: 2026-02-19 after Phase 2 (Hook Verification)*
+*Last updated: 2026-02-19 after Phase 3 (Skills Refinement)*
