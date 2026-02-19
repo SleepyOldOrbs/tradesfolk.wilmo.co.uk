@@ -24,10 +24,13 @@ Every specialist agent must have a battle-tested system prompt with clear expert
 - ✓ Security-auditor uses `permissionMode: plan` — Phase 1
 - ✓ Technical-writer uses `permissionMode: acceptEdits` — Phase 1
 - ✓ All agent descriptions fit within 2% context budget (3,903 chars total) — Phase 1
+- ✓ Hook script portable (no jq, `#!/usr/bin/env bash`, executable bit tracked in git) — Phase 2
+- ✓ hooks.json schema and TeammateIdle event name verified against official Claude Code docs — Phase 2
+- ✓ `${CLAUDE_PLUGIN_ROOT}` path resolution confirmed for plugin cache copying — Phase 2
 
 ### Active
 
-- [ ] Verify TeammateIdle hook event name works in current Claude Code version
+- [ ] Live runtime verification of TeammateIdle hook in Agent Teams session (deferred to Phase 4)
 - [ ] End-to-end testing in a real Agent Team session
 - [ ] Additional specialist agents (mobile-developer, ml-engineer, etc.) where they cover distinct expertise
 - [ ] `team-templates` skill — pre-built team compositions for common scenarios
@@ -73,4 +76,4 @@ Every specialist agent must have a battle-tested system prompt with clear expert
 | Positive framing in agent descriptions | Commentary uses "operates in X mode" not "cannot do Y" — avoids confusion | Phase 1: Implemented |
 
 ---
-*Last updated: 2026-02-19 after Phase 1 (Agent Hardening)*
+*Last updated: 2026-02-19 after Phase 2 (Hook Verification)*

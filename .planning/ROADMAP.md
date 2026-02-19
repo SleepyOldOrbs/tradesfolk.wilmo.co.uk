@@ -13,7 +13,7 @@ This roadmap takes the Agent Pool plugin from a working prototype (12 agents, 2 
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [x] **Phase 1: Agent Hardening** - Refine all 12 agent definitions for reliable discovery, safety defaults, and context efficiency
-- [ ] **Phase 2: Hook Verification** - Verify and fix the TeammateIdle hook for portability and real-world use
+- [x] **Phase 2: Hook Verification** - Verify and fix the TeammateIdle hook for portability and real-world use
 - [ ] **Phase 3: Skills Refinement** - Fix skill frontmatter, build team-templates skill, and sync skills with finalized roster
 - [ ] **Phase 4: Integration Testing** - Validate the complete plugin end-to-end in a real Agent Teams session
 - [ ] **Phase 5: Documentation and Distribution** - Write README and CHANGELOG, push to GitHub with proper versioning
@@ -48,7 +48,7 @@ Plans:
 **Plans**: 1 plan
 
 Plans:
-- [ ] 02-01-PLAN.md -- Harden hook script for portability (shebang, jq removal, executable bit) and verify hooks.json configuration
+- [x] 02-01-PLAN.md -- Harden hook script for portability (shebang, jq removal, executable bit) and verify hooks.json configuration
 
 ### Phase 3: Skills Refinement
 **Goal**: All skills use correct frontmatter, the team-templates skill provides pre-built compositions, and existing skills reflect the finalized agent roster
@@ -101,7 +101,7 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Agent Hardening | 4/4 | Complete | 2026-02-19 |
-| 2. Hook Verification | 0/1 | In progress | - |
+| 2. Hook Verification | 1/1 | Complete | 2026-02-19 |
 | 3. Skills Refinement | 0/? | Not started | - |
 | 4. Integration Testing | 0/? | Not started | - |
 | 5. Documentation and Distribution | 0/? | Not started | - |

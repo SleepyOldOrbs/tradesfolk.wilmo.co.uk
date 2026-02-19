@@ -2,17 +2,17 @@
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-02-19 after Phase 1)
+See: .planning/PROJECT.md (updated 2026-02-19 after Phase 2)
 
 **Core value:** Every specialist agent must have a battle-tested system prompt with clear expertise boundaries so the Team Lead can reliably match tasks to the right expert.
-**Current focus:** Phase 2: Hook Verification
+**Current focus:** Phase 3: Skills Refinement
 
 ## Current Position
 
-Phase: 2 of 5 (Hook Verification)
-Plan: 1 of 1 in current phase (COMPLETE)
+Phase: 3 of 5 (Skills Refinement)
+Plan: 1 of ? in current phase
 Status: Phase 2 Complete -- Ready for Phase 3
-Last activity: 2026-02-19 -- Plan 02-01 complete (hook portability, executable bit, hooks.json verification)
+Last activity: 2026-02-19 -- Phase 2 complete (hook portability verified)
 
 Progress: [######░░░░] 40%
 
@@ -63,5 +63,5 @@ None yet.
 ## Session Continuity
 
 Last session: 2026-02-19
-Stopped at: Completed 02-01-PLAN.md (Phase 2 complete)
-Resume file: .planning/phases/02-hook-verification/02-01-SUMMARY.md
+Stopped at: Phase 2 complete, transitioning to Phase 3
+Resume file: None
