@@ -58,11 +58,11 @@ Plans:
   1. All skill YAML frontmatter uses the officially documented field names (`user-invocable` not `user_invocable`, `argument-hint` not `args`)
   2. The team-templates skill provides 5-8 pre-built team compositions for common scenarios (full-stack feature, security hardening, new API, etc.) that a user can invoke directly
   3. browse-pool and assemble-team skills list exactly the same agents that exist in the agents/ directory -- no stale references, no missing agents
-**Plans**: TBD
+**Plans**: 2 plans
 
 Plans:
-- [ ] 03-01: TBD
-- [ ] 03-02: TBD
+- [ ] 03-01-PLAN.md -- Fix frontmatter and sync roster in browse-pool and assemble-team skills
+- [ ] 03-02-PLAN.md -- Create team-templates skill with 7 pre-built compositions and update CLAUDE.md
 
 ### Phase 4: Integration Testing
 **Goal**: The complete plugin is verified working end-to-end -- agents load, skills invoke, hooks fire, and installation succeeds
@@ -102,6 +102,6 @@ Phases execute in numeric order: 1 -> 2 -> 3 -> 4 -> 5
 |-------|----------------|--------|-----------|
 | 1. Agent Hardening | 4/4 | Complete | 2026-02-19 |
 | 2. Hook Verification | 1/1 | Complete | 2026-02-19 |
-| 3. Skills Refinement | 0/? | Not started | - |
+| 3. Skills Refinement | 0/2 | Not started | - |
 | 4. Integration Testing | 0/? | Not started | - |
 | 5. Documentation and Distribution | 0/? | Not started | - |
