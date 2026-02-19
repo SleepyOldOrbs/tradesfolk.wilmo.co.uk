@@ -31,7 +31,8 @@ agent-pool/
 │   └── 12-technical-writer.md
 ├── skills/
 │   ├── browse-pool/SKILL.md  # View the agent roster
-│   └── assemble-team/SKILL.md # Get team recommendations for a task
+│   ├── assemble-team/SKILL.md # Get team recommendations for a task
+│   └── team-templates/SKILL.md # Pre-built team compositions
 ├── hooks/
 │   ├── hooks.json            # TeammateIdle hook config
 │   └── teammate-checklist.sh # Lightweight idle check
@@ -113,8 +114,7 @@ Skills live in `skills/<skill-name>/SKILL.md` with YAML frontmatter:
 ---
 name: skill-name
 description: What this skill does.
-user_invocable: true
-args: optional_arg_description
+argument-hint: hint text
 ---
 
 Skill prompt body...
@@ -133,7 +133,7 @@ Skill prompt body...
 ## Adding a new skill
 
 1. Create `skills/<name>/SKILL.md` with frontmatter
-2. Set `user_invocable: true` if users should invoke it directly via `/skill-name`
+2. Skills are user-invocable by default; add `disable-model-invocation: true` to prevent Claude from auto-triggering
 
 ## Context budget
 
