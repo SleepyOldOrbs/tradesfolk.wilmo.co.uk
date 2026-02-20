@@ -1,6 +1,6 @@
 {
   "name": "agent-pool",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Pre-defined pool of specialist agents for Claude Code Agent Teams. Provides a roster of domain experts that a Team Lead can pull from depending on the task at hand.",
   "author": {
     "name": "James"
