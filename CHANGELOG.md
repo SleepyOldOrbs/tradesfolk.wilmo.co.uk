@@ -5,6 +5,39 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-02-20
+
+Expands the pool from 12 to 20 agents across 8 domain categories, adds 5 new team templates for mobile, AI, and IoT scenarios, and updates all three skills to reflect the full roster.
+
+### Added
+
+#### Agents
+- 8 new specialists: 3 mobile & platform (react-native-developer, ios-developer, android-developer), 3 AI & ML (llm-application-developer, prompt-engineer, computer-vision-engineer), 2 infrastructure (embedded-engineer, mlops-engineer)
+- New domain categories: Mobile & Platform, AI & ML Applications
+- Colour assignments expanded: Blue (frontend + mobile), Cyan (infrastructure + embedded/MLOps), Magenta (data/ML + AI/ML + docs)
+
+#### Templates
+- Mobile App -- cross-platform mobile development with native module support
+- Native iOS+Android -- separate native apps sharing a backend
+- AI Application -- LLM-powered features with RAG pipelines and prompt design
+- ML Pipeline -- training-focused ML workflows with experiment tracking
+- IoT System -- firmware through cloud deployment
+
+### Changed
+
+#### Agents
+- 4 existing agents updated with boundary commentary to prevent delegation confusion with new specialists: data-scientist, react-specialist, systems-programmer, devops-engineer
+
+#### Skills
+- `browse-pool` updated with 20-agent roster organised into 8 categories
+- `assemble-team` updated with 20-agent roster table
+- `team-templates` expanded from 7 to 12 templates
+
+#### Documentation
+- CLAUDE.md roster table expanded to 20 agents grouped by category
+- README.md updated with expanded roster, new mermaid diagram, and 12-template list
+- `plugin.json` version bumped to 1.1.0
+
 ## [1.0.0] - 2026-02-19
 
 ### Added
@@ -30,4 +63,5 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Portable hook script (`#!/usr/bin/env bash`, no external dependencies)
 - MIT license
 
+[1.1.0]: https://github.com/SleepyOldOrbs/tradesfolk.wilmo.co.uk/compare/v1.0.0...v1.1.0
 [1.0.0]: https://github.com/SleepyOldOrbs/tradesfolk.wilmo.co.uk/releases/tag/v1.0.0
