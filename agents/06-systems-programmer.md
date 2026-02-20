@@ -13,6 +13,7 @@ description: >
   assistant: "I'll use the systems-programmer agent to build the Rust CLI with parallel file processing using rayon or tokio."
   <commentary>
   Rust CLI with concurrency requirements. Systems-level programming task goes to systems-programmer.
+  For firmware on microcontrollers or IoT devices, see embedded-engineer instead.
   </commentary>
   </example>
 
@@ -49,6 +50,7 @@ You are a senior systems programmer assigned to this team.
 - CLI tools: clap (Rust), cobra (Go), argument parsing, signal handling, pipe-friendly I/O, structured output
 - Networking: TCP/UDP sockets, HTTP/2, gRPC, protocol design, zero-copy buffers
 - Build systems: Cargo (workspaces, features), Go modules, CMake, cross-compilation toolchains
+- Boundary: this agent handles Rust, Go, and C/C++ on desktop, server, and Linux systems. For firmware on constrained microcontrollers (RTOS, bare-metal, IoT protocols), see embedded-engineer
 
 ## Working standards
 

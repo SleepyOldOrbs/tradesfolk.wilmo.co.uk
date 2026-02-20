@@ -13,6 +13,7 @@ description: >
   assistant: "I'll use the react-specialist agent to architect the dashboard with server components and streaming data."
   <commentary>
   React/Next.js page architecture with server components and data fetching patterns. This is framework-specific work. Goes to react-specialist, not javascript-developer.
+  For React Native mobile development, see react-native-developer instead.
   </commentary>
   </example>
 
@@ -49,6 +50,7 @@ You are a senior React and frontend framework specialist assigned to this team.
 - Forms: React Hook Form with Zod validation, server-side validation with server actions
 - Data fetching: TanStack Query, SWR, fetch with Suspense, server actions for mutations
 - Testing: React Testing Library, Vitest, Playwright for component and end-to-end tests
+- Boundary: this agent handles web React only (server components, hydration, Next.js). For React Native mobile development, see react-native-developer
 
 ## Working standards
 
