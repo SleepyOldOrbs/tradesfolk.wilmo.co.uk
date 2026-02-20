@@ -2,24 +2,32 @@
 
 A Claude Code plugin providing a curated roster of specialist agents for Agent Teams.
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
+![Version](https://img.shields.io/badge/version-1.1.0-blue)
 
 ## What This Is
 
-When Claude Code's Agent Teams feature creates a team, the Team Lead spawns teammates ad-hoc. Agent Pool fills a gap: instead of inventing agents on the fly, the Lead pulls from a pre-defined pool of 12 domain specialists with proven system prompts, consistent structure, and clear expertise boundaries. Think of it as a directory of tradespeople rather than training someone from scratch each time.
+When Claude Code's Agent Teams feature creates a team, the Team Lead spawns teammates ad-hoc. Agent Pool fills a gap: instead of inventing agents on the fly, the Lead pulls from a curated roster of 20 domain specialists across 8 categories with proven system prompts, consistent structure, and clear expertise boundaries. Think of it as a directory of tradespeople rather than training someone from scratch each time.
 
 ```mermaid
 graph TD
     USER[You] -->|describe task| TL[Team Lead]
-    TL -->|matches expertise| POOL{Agent Pool}
-    POOL --> FE[Frontend Specialists]
-    POOL --> BE[Backend Specialists]
-    POOL --> QS[Quality & Security]
-    POOL --> OPS[Infrastructure & Data]
+    TL -->|matches expertise| POOL{Agent Pool<br/>20 Specialists}
+    POOL --> FE["Frontend & UI (3)"]
+    POOL --> MOB["Mobile & Platform (3)"]
+    POOL --> BE["Backend & Systems (4)"]
+    POOL --> QS["Quality & Security (2)"]
+    POOL --> OPS["Infrastructure & Operations (3)"]
+    POOL --> DATA["Data & ML (2)"]
+    POOL --> AI["AI & ML Applications (2)"]
+    POOL --> DOCS["Documentation (1)"]
     FE -->|spawns| WORK[Specialist works on task]
+    MOB -->|spawns| WORK
     BE -->|spawns| WORK
     QS -->|spawns| WORK
     OPS -->|spawns| WORK
+    DATA -->|spawns| WORK
+    AI -->|spawns| WORK
+    DOCS -->|spawns| WORK
 ```
 
 ## Prerequisites
@@ -54,21 +62,71 @@ Marketplace installation will be available in a future release.
 
 ## Agent Roster
 
-The pool contains 12 specialists grouped by domain. Each agent has a terminal colour for visual identification, a defined set of tools, and a permission mode controlling how it interacts with your codebase.
+The pool contains 20 specialists grouped by domain. Each agent has a terminal colour for visual identification, a defined set of tools, and a permission mode controlling how it interacts with your codebase.
+
+### Frontend & UI
 
 | Colour | Agent | Domain | Tools Tier | Permission |
 |--------|-------|--------|------------|------------|
 | Blue | `javascript-developer` | JS/TS, Node.js, build tooling, code modernisation | Implementation | default |
 | Blue | `react-specialist` | React 19, Next.js 15, server components, frontend performance | Implementation | default |
 | Blue | `ux-designer` | Accessibility, design systems, responsive layouts, UI/UX | Documentation | default |
+
+### Mobile & Platform
+
+| Colour | Agent | Domain | Tools Tier | Permission |
+|--------|-------|--------|------------|------------|
+| Blue | `react-native-developer` | React Native 0.78+, Expo SDK 53, cross-platform mobile | Implementation | default |
+| Blue | `ios-developer` | Swift 6.2, SwiftUI, SwiftData, iOS platform | Implementation | default |
+| Blue | `android-developer` | Kotlin 2.3, Jetpack Compose, Android platform | Implementation | default |
+
+### Backend & Systems
+
+| Colour | Agent | Domain | Tools Tier | Permission |
+|--------|-------|--------|------------|------------|
 | Green | `python-developer` | Python, FastAPI, Django, CLI tools, scripting | Implementation | default |
 | Green | `backend-architect` | API design, system architecture, service boundaries | Implementation | plan |
 | Green | `systems-programmer` | Rust, Go, C/C++, performance-critical code, concurrency | Full access | default |
 | Green | `database-specialist` | Schema design, query optimisation, migrations, indexing | Implementation | default |
+
+### Quality
+
+| Colour | Agent | Domain | Tools Tier | Permission |
+|--------|-------|--------|------------|------------|
 | Yellow | `qa-tester` | Test automation, test strategy, coverage, E2E testing | Full access | default |
+
+### Security
+
+| Colour | Agent | Domain | Tools Tier | Permission |
+|--------|-------|--------|------------|------------|
 | Red | `security-auditor` | Security audits, threat modelling, vulnerability assessment | Read-only | plan |
+
+### Infrastructure & Operations
+
+| Colour | Agent | Domain | Tools Tier | Permission |
+|--------|-------|--------|------------|------------|
 | Cyan | `devops-engineer` | CI/CD, Docker, K8s, Terraform, cloud infrastructure | Full access | default |
+| Cyan | `embedded-engineer` | C/C++, FreeRTOS/Zephyr, IoT protocols, hardware-software integration | Full access | default |
+| Cyan | `mlops-engineer` | MLflow, Kubeflow, vLLM, model serving, ML infrastructure | Full access | default |
+
+### Data & ML
+
+| Colour | Agent | Domain | Tools Tier | Permission |
+|--------|-------|--------|------------|------------|
 | Magenta | `data-scientist` | ML, data analysis, statistics, experiment design | Full access | default |
+| Magenta | `computer-vision-engineer` | PyTorch, OpenCV, YOLO, diffusion models, visual AI | Implementation | default |
+
+### AI & ML Applications
+
+| Colour | Agent | Domain | Tools Tier | Permission |
+|--------|-------|--------|------------|------------|
+| Magenta | `llm-application-developer` | LangChain, RAG pipelines, vector stores, MCP, agent orchestration | Implementation | plan |
+| Magenta | `prompt-engineer` | DSPy, Promptfoo, prompt design, evaluation frameworks | Documentation | default |
+
+### Documentation
+
+| Colour | Agent | Domain | Tools Tier | Permission |
+|--------|-------|--------|------------|------------|
 | Magenta | `technical-writer` | API docs, guides, tutorials, ADRs | Documentation | acceptEdits |
 
 ### Tools Tiers
@@ -96,7 +154,7 @@ View the complete agent roster grouped by domain.
 > /browse-pool
 ```
 
-Shows all 12 agents organised by category: Frontend & UI, Backend & Systems, Quality & Security, Infrastructure & Operations, Data & ML, and Documentation.
+Shows all 20 agents organised by category: Frontend & UI, Mobile & Platform, Backend & Systems, Quality, Security, Infrastructure & Operations, Data & ML, AI & ML Applications, and Documentation.
 
 ### `/assemble-team <task description>`
 
@@ -110,7 +168,7 @@ Returns a recommended team (for example: backend-architect as lead, python-devel
 
 ### `/team-templates`
 
-Browse 7 pre-built team compositions for common scenarios.
+Browse 12 pre-built team compositions for common scenarios.
 
 ```
 > /team-templates
@@ -118,13 +176,32 @@ Browse 7 pre-built team compositions for common scenarios.
 
 Available templates:
 
+**Core Development:**
+
 1. **Full-Stack Feature** -- react-specialist (lead), javascript-developer, qa-tester
 2. **API Development** -- backend-architect (lead), python-developer, database-specialist, qa-tester
-3. **Security Hardening** -- security-auditor (lead), backend-architect, devops-engineer
-4. **Frontend Overhaul** -- react-specialist (lead), ux-designer, javascript-developer
-5. **Data Pipeline** -- data-scientist (lead), python-developer, database-specialist
-6. **Infrastructure Setup** -- devops-engineer (lead), systems-programmer, backend-architect
-7. **Documentation Sprint** -- technical-writer (lead), backend-architect
+3. **Frontend Overhaul** -- react-specialist (lead), ux-designer, javascript-developer
+
+**Security & Infrastructure:**
+
+4. **Security Hardening** -- security-auditor (lead), backend-architect, devops-engineer
+5. **Infrastructure Setup** -- devops-engineer (lead), systems-programmer, backend-architect
+
+**Data & AI:**
+
+6. **Data Pipeline** -- data-scientist (lead), python-developer, database-specialist
+7. **AI Application** -- llm-application-developer (lead), prompt-engineer, backend-architect, qa-tester
+8. **ML Pipeline** -- data-scientist (lead), mlops-engineer, python-developer
+
+**Mobile:**
+
+9. **Mobile App** -- react-native-developer (lead), ios-developer, android-developer, qa-tester
+10. **Native iOS+Android** -- backend-architect (lead), ios-developer, android-developer, qa-tester
+
+**Specialist:**
+
+11. **IoT System** -- embedded-engineer (lead), systems-programmer, devops-engineer
+12. **Documentation Sprint** -- technical-writer (lead), backend-architect
 
 ## Workflow Examples
 
@@ -155,6 +232,24 @@ Use the assemble-team skill to get recommendations:
 ```
 
 The skill recommends `security-auditor` as lead with `backend-architect` for architectural context. The security-auditor operates in read-only mode with `plan` permissions -- it examines code and proposes fixes without modifying files directly. This ensures the audit is non-destructive.
+
+### Building an AI Application
+
+Use the AI Application template to assemble a team for LLM-powered features:
+
+```
+> /team-templates AI Application
+```
+
+This assembles `llm-application-developer` (lead), `prompt-engineer`, `backend-architect`, and `qa-tester`. Describe the task:
+
+```
+> Build a document Q&A feature using RAG -- ingest PDFs, chunk and embed them,
+  store in a vector database, and expose a chat endpoint that retrieves relevant
+  context before generating answers.
+```
+
+The `llm-application-developer` designs the RAG pipeline and orchestrates retrieval logic, `prompt-engineer` crafts and evaluates the system prompts for answer quality, `backend-architect` designs the API endpoints and ingestion flow, and `qa-tester` writes integration tests covering retrieval accuracy and edge cases. Each agent works within its domain expertise while the lead coordinates the overall architecture.
 
 ### Quick Start with Templates
 
@@ -188,7 +283,7 @@ The hook allows the idle transition to proceed -- it is purely informational. Th
 
 ### Adding a New Agent
 
-1. Create a file in `agents/` with the next available number prefix (e.g., `13-my-agent.md`).
+1. Create a file in `agents/` with the next available number prefix (e.g., `21-my-agent.md`).
 
 2. Include the required YAML frontmatter:
 
@@ -220,7 +315,7 @@ The hook allows the idle transition to proceed -- it is purely informational. Th
 
 4. Include 3 `<example>` blocks in the description for delegation matching.
 
-5. Assign a colour matching the agent's domain: blue (frontend), green (backend), yellow (quality), red (security), cyan (infrastructure), magenta (data/docs).
+5. Assign a colour matching the agent's domain category (see Colour Scheme Reference below).
 
 6. Claude Code auto-discovers agents from the `agents/` directory. No registration step is needed.
 
@@ -233,11 +328,14 @@ Edit the agent's `.md` file directly. Changes take effect on the next Claude Cod
 | Colour | Domain |
 |--------|--------|
 | Blue | Frontend & UI |
+| Blue | Mobile & Platform |
 | Green | Backend & Systems |
 | Yellow | Quality |
 | Red | Security |
-| Cyan | Infrastructure |
-| Magenta | Data & Docs |
+| Cyan | Infrastructure & Operations |
+| Magenta | Data & ML |
+| Magenta | AI & ML Applications |
+| Magenta | Documentation |
 
 ## Contributing
 
