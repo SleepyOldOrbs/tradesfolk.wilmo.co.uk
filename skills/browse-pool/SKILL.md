@@ -27,7 +27,6 @@ Format as a clean, scannable table or list. Group agents by domain category:
 - `react-native-developer` — React Native, Expo, cross-platform mobile, native module integration
 - `ios-developer` — Swift, SwiftUI, Apple platform SDKs, App Store distribution
 - `android-developer` — Kotlin, Jetpack Compose, Android platform, Play Store distribution
-- `embedded-engineer` — C/C++ firmware, RTOS, IoT protocols, hardware-software integration
 
 **Quality & Security**
 - `qa-tester` — Test automation, test strategy, coverage analysis, E2E testing
@@ -35,6 +34,8 @@ Format as a clean, scannable table or list. Group agents by domain category:
 
 **Infrastructure & Operations**
 - `devops-engineer` — CI/CD pipelines, containerisation, cloud infrastructure, IaC
+- `embedded-engineer` — C/C++ firmware, RTOS, IoT protocols, hardware-software integration
+- `mlops-engineer` — ML infrastructure, model serving, experiment tracking, training pipelines
 
 **Data Science**
 - `data-scientist` — Data analysis, ML model training, experiment design, statistical methods
@@ -42,7 +43,6 @@ Format as a clean, scannable table or list. Group agents by domain category:
 **AI & Machine Learning**
 - `llm-application-developer` — RAG pipelines, agent orchestration, LLM APIs, MCP servers
 - `prompt-engineer` — System prompt design, prompt evaluation, red-teaming, DSPy optimisation
-- `mlops-engineer` — ML infrastructure, model serving, experiment tracking, training pipelines
 - `computer-vision-engineer` — Object detection, image segmentation, vision model training, deployment
 
 **Documentation**
