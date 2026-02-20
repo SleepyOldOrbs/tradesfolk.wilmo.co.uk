@@ -49,6 +49,36 @@ Present the team templates below. If `$ARGUMENTS` is provided, filter to the mat
 - **Lead:** technical-writer
 - **When to use:** API docs, developer guides, architecture documentation, and ADRs.
 
+### 8. Mobile App
+
+- **Agents:** react-native-developer, ios-developer, android-developer, qa-tester
+- **Lead:** react-native-developer
+- **When to use:** Cross-platform mobile apps needing native modules, platform-specific features, and test coverage across iOS and Android.
+
+### 9. Native iOS+Android
+
+- **Agents:** backend-architect, ios-developer, android-developer, qa-tester
+- **Lead:** backend-architect
+- **When to use:** Separate native apps sharing a backend. Architect ensures consistent API contracts across both platforms.
+
+### 10. AI Application
+
+- **Agents:** llm-application-developer, prompt-engineer, backend-architect, qa-tester
+- **Lead:** llm-application-developer
+- **When to use:** Building LLM-powered features with RAG pipelines, agent orchestration, or tool integration. Includes prompt design and evaluation.
+
+### 11. ML Pipeline
+
+- **Agents:** data-scientist, mlops-engineer, python-developer
+- **Lead:** data-scientist
+- **When to use:** Training-focused ML workflows: experiment tracking, model training, data processing, and pipeline orchestration.
+
+### 12. IoT System
+
+- **Agents:** embedded-engineer, systems-programmer, devops-engineer
+- **Lead:** embedded-engineer
+- **When to use:** Hardware-software integration from firmware through cloud deployment. Covers MCU programming, communication protocols, and infrastructure.
+
 ---
 
 Pick a template by name or number, or describe your task for a custom recommendation via /assemble-team.
