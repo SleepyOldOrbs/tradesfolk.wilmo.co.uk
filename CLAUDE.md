@@ -6,47 +6,33 @@ A Claude Code plugin providing a pre-defined roster of specialist agents for Age
 
 When Claude Code's Agent Teams feature creates a team, the Team Lead spawns teammates ad-hoc. This plugin fills a gap: instead of inventing agents on the fly, the Lead pulls from a **curated pool** of domain specialists with proven system prompts, consistent structure, and clear expertise boundaries. Think of it like calling a tradesman from a directory rather than training a random person.
 
-## Project status: IN PROGRESS
+## Project status
 
-See `STATUS.md` for detailed current state and outstanding work.
+Version 1.1.0 — 20 agents across 8 domain categories. See `CHANGELOG.md` for release history.
 
 ## Structure
 
 ```
-agent-pool/
-├── .claude-plugin/
-│   └── plugin.json          # Plugin manifest
-├── agents/                   # 20 specialist agent definitions
+.claude-plugin/
+│   └── plugin.json            # Plugin manifest
+├── agents/                    # 20 specialist agent definitions
 │   ├── 01-javascript-developer.md
 │   ├── 02-react-specialist.md
-│   ├── 03-ux-designer.md
-│   ├── 04-python-developer.md
-│   ├── 05-backend-architect.md
-│   ├── 06-systems-programmer.md
-│   ├── 07-database-specialist.md
-│   ├── 08-qa-tester.md
-│   ├── 09-security-auditor.md
-│   ├── 10-devops-engineer.md
-│   ├── 11-data-scientist.md
-│   ├── 12-technical-writer.md
-│   ├── 13-react-native-developer.md
-│   ├── 14-ios-developer.md
-│   ├── 15-android-developer.md
-│   ├── 16-embedded-engineer.md
-│   ├── 17-llm-application-developer.md
-│   ├── 18-prompt-engineer.md
-│   ├── 19-mlops-engineer.md
+│   ├── ...
 │   └── 20-computer-vision-engineer.md
 ├── skills/
-│   ├── browse-pool/SKILL.md  # View the agent roster
+│   ├── browse-pool/SKILL.md   # View the agent roster
 │   ├── assemble-team/SKILL.md # Get team recommendations for a task
 │   └── team-templates/SKILL.md # Pre-built team compositions
 ├── hooks/
-│   ├── hooks.json            # TeammateIdle hook config
-│   └── teammate-checklist.sh # Lightweight idle check
-├── CLAUDE.md                 # This file
-├── STATUS.md                 # Project status and TODO
-├── LICENSE                   # MIT
+│   ├── hooks.json             # TeammateIdle hook config
+│   └── teammate-checklist.sh  # Lightweight idle check
+├── scripts/
+│   └── validate-agents.sh     # Frontmatter and consistency checks
+├── CLAUDE.md                  # This file
+├── CHANGELOG.md               # Release history
+├── README.md                  # User-facing documentation
+├── LICENSE                    # MIT
 └── .gitignore
 ```
 
@@ -87,6 +73,17 @@ System prompt body goes here...
 | `tools` | Comma-separated tool names | Allowlist of tools the agent can use |
 | `permissionMode` | `default`, `acceptEdits`, `plan`, `dontAsk`, `bypassPermissions` | How the agent handles permission prompts |
 | `description` | Free text with `<example>` blocks | Used by Claude Code for agent discovery/matching |
+
+### Model selection guidance
+
+| Model | When to use | Current agents |
+|-------|-------------|----------------|
+| `inherit` | Default. Uses the same model as the Team Lead. Best for implementation agents that need strong reasoning. | All implementation and full-access agents |
+| `sonnet` | Documentation and review agents where speed matters more than deep reasoning. Lower cost per token. | ux-designer, technical-writer |
+| `haiku` | Lightweight tasks: formatting, linting, simple lookups. Fastest and cheapest. Not currently used. | — |
+| `opus` | Complex architectural decisions requiring the strongest reasoning. Higher cost. Not currently used. | — |
+
+When adding a new agent, default to `inherit` unless the agent's tasks are clearly documentation-only (use `sonnet`) or trivial (use `haiku`).
 
 ### Tool tiers
 
@@ -136,10 +133,12 @@ Skill prompt body...
 1. Create `agents/<NN>-<name>.md` with the required frontmatter fields (use the next available number prefix)
 2. Follow the three-section system prompt structure
 3. Include 3 `<example>` blocks in the description for delegation matching
-4. Assign a colour matching the agent's domain category
-5. Choose the appropriate tools tier and permission mode
-6. Update the roster table in this file and in `skills/assemble-team/SKILL.md`
-7. Claude Code auto-discovers agents from the `agents/` directory
+4. Add a delegation boundary guard as the last step in "When given a task" (e.g., "If this task requires X, stop and recommend delegating to Y")
+5. Assign a colour matching the agent's domain category
+6. Choose the appropriate tools tier and permission mode
+7. Update the roster table in this file, `skills/browse-pool/SKILL.md`, and `skills/assemble-team/SKILL.md`
+8. Run `bash scripts/validate-agents.sh` to check consistency
+9. Claude Code auto-discovers agents from the `agents/` directory
 
 ## Adding a new skill
 

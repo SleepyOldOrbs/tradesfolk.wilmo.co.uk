@@ -79,6 +79,30 @@ Present the team templates below. If `$ARGUMENTS` is provided, filter to the mat
 - **Lead:** embedded-engineer
 - **When to use:** Hardware-software integration from firmware through cloud deployment. Covers MCU programming, communication protocols, and infrastructure.
 
+### 13. Computer Vision Pipeline
+
+- **Agents:** computer-vision-engineer, data-scientist, mlops-engineer, qa-tester
+- **Lead:** computer-vision-engineer
+- **When to use:** Object detection, image segmentation, or visual AI tasks requiring model training, dataset management, and deployment infrastructure.
+
+### 14. Performance Optimization
+
+- **Agents:** systems-programmer, database-specialist, qa-tester
+- **Lead:** systems-programmer
+- **When to use:** Profiling bottlenecks, optimising query performance, memory usage, and concurrency. QA validates improvements with benchmarks.
+
+### 15. Accessibility Audit
+
+- **Agents:** ux-designer, react-specialist, qa-tester
+- **Lead:** ux-designer
+- **When to use:** WCAG compliance review, screen reader testing, keyboard navigation, colour contrast, and responsive design fixes.
+
+### 16. Migration / Upgrade
+
+- **Agents:** backend-architect, database-specialist, qa-tester
+- **Lead:** backend-architect
+- **When to use:** Major version upgrades, framework migrations, database schema migrations, and data transformation. Architect plans the strategy, specialists execute, QA validates nothing breaks.
+
 ---
 
 Pick a template by name or number, or describe your task for a custom recommendation via /assemble-team.

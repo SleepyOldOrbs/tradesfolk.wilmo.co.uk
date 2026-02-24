@@ -168,7 +168,7 @@ Returns a recommended team (for example: backend-architect as lead, python-devel
 
 ### `/team-templates`
 
-Browse 12 pre-built team compositions for common scenarios.
+Browse 16 pre-built team compositions for common scenarios.
 
 ```
 > /team-templates
@@ -202,6 +202,10 @@ Available templates:
 
 11. **IoT System** -- embedded-engineer (lead), systems-programmer, devops-engineer
 12. **Documentation Sprint** -- technical-writer (lead), backend-architect
+13. **Computer Vision Pipeline** -- computer-vision-engineer (lead), data-scientist, mlops-engineer, qa-tester
+14. **Performance Optimization** -- systems-programmer (lead), database-specialist, qa-tester
+15. **Accessibility Audit** -- ux-designer (lead), react-specialist, qa-tester
+16. **Migration / Upgrade** -- backend-architect (lead), database-specialist, qa-tester
 
 ## Workflow Examples
 
