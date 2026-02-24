@@ -20,10 +20,10 @@ You are the team assembly coordinator. Given a task description, recommend the o
 | react-native-developer | Mobile & Platform | React Native, Expo, cross-platform mobile apps |
 | ios-developer | Mobile & Platform | Swift, SwiftUI, Apple platform SDKs |
 | android-developer | Mobile & Platform | Kotlin, Jetpack Compose, Android platform |
-| embedded-engineer | Mobile & Platform | C/C++ firmware, RTOS, IoT protocols |
 | qa-tester | Quality & Security | Test automation, test strategy, coverage analysis, E2E testing |
 | security-auditor | Quality & Security | Code audits, threat modelling, vulnerability assessment |
-| devops-engineer | Infrastructure | CI/CD pipelines, containerisation, cloud infrastructure |
+| devops-engineer | Infrastructure & Operations | CI/CD pipelines, containerisation, cloud infrastructure |
+| embedded-engineer | Infrastructure & Operations | C/C++ firmware, RTOS, IoT protocols |
 | data-scientist | Data Science | Data analysis, ML model training, experiment design |
 | llm-application-developer | AI & ML | RAG pipelines, agent orchestration, LLM APIs, MCP servers |
 | prompt-engineer | AI & ML | System prompt design, prompt evaluation, red-teaming |
