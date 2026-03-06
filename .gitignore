@@ -19,3 +19,7 @@ Desktop.ini
 
 # User ideas file
 your-idea.md
+
+# Python artifacts
+__pycache__/
+*.py[cod]
